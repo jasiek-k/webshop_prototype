@@ -1,35 +1,35 @@
-const back = document.getElementById("background");
-const tip = document.getElementById("tip");
-let tilesArray = document.getElementsByClassName("tile");
-let picsArray = document.getElementsByClassName("tilePic");
-let contentCategories = document.getElementsByClassName("category");
-let content = document.getElementsByClassName("tile");
-let category = ['tshirt', 'hoodie', 'cap', 'accessory', 'all'];
-let sideBarArray = document.getElementsByClassName("cat");
+const back = document.getElementById("modalBackground");
+const tip = document.getElementById("modalTip");
+let tilesArray = document.getElementsByClassName("box");
+let picsArray = document.getElementsByClassName("boxPic");
+let contentCategories = document.getElementsByClassName("filterCategory");
+let content = document.getElementsByClassName("box");
+let categories = ['tshirt', 'hoodie', 'cap', 'accessory', 'all'];
+let sideBarArray = document.getElementsByClassName("sidebarCategory");
 
 function openTile() {
     for (let i = 0; i < tilesArray.length; i++) {
         tilesArray[i].addEventListener("click", function () {
-            setTileDisplay("inline-block", i);
+            setBoxDisplay("inline-block", i);
         });
         picsArray[i].addEventListener("click", function () {
-            setTileDisplay("none", i);
+            setBoxDisplay("none", i);
         });
         back.addEventListener("click", function () {
-            setTileDisplay("none", i);
+            setBoxDisplay("none", i);
         });
     }
 }
 
-function setTileDisplay(value, i) {
+function setBoxDisplay(value, i) {
     picsArray[i].style.display = value;
     back.style.display = value;
     tip.style.display = value;
 }
 
-document.getElementById("nemek").addEventListener("click", function () {
-    document.getElementById("back").classList.add("fadeOut");
-    document.getElementById("nemek").classList.add("delete");
+document.getElementById("nemekAnimation").addEventListener("click", function () {
+    document.getElementById("animationBackground").classList.add("fadeOut");
+    document.getElementById("nemekAnimation").classList.add("delete");
 
 });
 
@@ -47,7 +47,7 @@ function filter(string) {
 function filterListen() {
     for (let i = 0; i < sideBarArray.length; i++) {
         sideBarArray[i].addEventListener("click", function () {
-            filter(category[i]);
+            filter(categories[i]);
         })
     }
 }
@@ -56,5 +56,10 @@ function setDisplay(string, i) {
     content[i].style.display = string;
 }
 
-openTile();
-filterListen();
+function main() {
+    openTile();
+    filterListen();
+}
+
+main();
+

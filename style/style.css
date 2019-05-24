@@ -13,7 +13,7 @@ body {
     width: 200px;
 }
 
-.cart img {
+.basket img {
     float: left;
     width: 35px;
     margin-left: 25px;
@@ -21,7 +21,7 @@ body {
     margin-right: -60px;
 }
 
-.cart {
+.basket {
     position: fixed;
     right: 0;
     top: 0;
@@ -31,26 +31,11 @@ body {
     color: #fffff4;
 }
 
-.cart span {
+.basket span {
     position: relative;
     width: 150px;
     top: 30px;
     margin-right: 10px;
-}
-
-.navigation {
-    position: fixed;
-    margin-right: auto;
-    width: 80%;
-    margin-left: 150px;
-}
-
-nav {
-    position: fixed;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
 .navbarStripe {
@@ -63,18 +48,33 @@ nav {
     z-index: -5;
 }
 
-.nav {
+.navigation {
+    position: fixed;
+    margin-right: auto;
+    width: 80%;
+    margin-left: 150px;
+}
+
+.navigationField {
     text-decoration: none;
     color: black;
     padding: 75px;
     line-height: 80px;
 }
 
-.nav:hover {
+.navigationField:hover {
     cursor: pointer;
 }
 
-.outline_caption {
+nav {
+    position: fixed;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.crimeOutline {
     width: 650px;
     z-index: -3;
     margin-left: auto;
@@ -89,10 +89,8 @@ nav {
 .sidebar {
     position: fixed;
     float: left;
-   ! margin-left: 50px;
     margin-top: 110px;
     width: 250px;
-
 }
 
 .sidebar p {
@@ -109,7 +107,7 @@ main {
     box-sizing: border-box;
 }
 
-.cat {
+.sidebarCategory {
     text-decoration: none;
     color: black;
     display: block;
@@ -121,18 +119,18 @@ main {
     position: relative;
 }
 
-.cat p {
+.sidebarCategory p {
     left: 75px;
     position: relative;
 }
 
-.cat:hover {
+.sidebarCategory:hover {
     cursor: pointer;
     background-color: black;
     color: #fffff4;
 }
 
-.tile {
+.box {
     width: 300px;
     text-align: left;
     font-size: 20px;
@@ -141,12 +139,12 @@ main {
 
 }
 
-.tile a {
+.box a {
     text-decoration: none;
     color: black;
 }
 
-.tile img {
+.box img {
     width: 100%;
 }
 
@@ -160,11 +158,15 @@ section {
     margin-top: 95px;
 }
 
-.tile .category {
+.box .filterCategory {
     display: none;
 }
 
-.tile:hover {
+.boxCategory {
+    font-size: 15px;
+}
+
+.box:hover {
     cursor: pointer;
 }
 
@@ -183,17 +185,17 @@ section {
     margin-right: auto;
 }
 
-.tilePic {
-    width: 500px;
+.boxPic {
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
     z-index: 10;
     position: fixed;
-    top: 120px;
+    top: 70px;
     display: none;
 }
 
-.background {
+.modalBackground {
     width: 100%;
     height: 100%;
     top: 0;
@@ -203,7 +205,11 @@ section {
     display: none;
 }
 
-.tip {
+.modalBackground:hover, .gallery:hover, .modalTip:hover{
+	cursor: pointer;
+}
+
+.modalTip {
     position: fixed;
     bottom: 30px;
     display: none;
@@ -215,7 +221,7 @@ section {
     width: 300px;
 }
 
-.tip p {
+.modalTip p {
     line-height: 30px;
     left: 75px;
     position: relative;
@@ -235,7 +241,6 @@ section {
         opacity: 0;
         width: 0;
         height: 0;
-
     }
 }
 
@@ -252,7 +257,6 @@ section {
         opacity: 0;
         width: 0;
         height: 0;
-
     }
 }
 
@@ -269,7 +273,6 @@ section {
         opacity: 0;
         width: 0;
         height: 0;
-
     }
 }
 
@@ -319,7 +322,7 @@ section {
     animation-fill-mode: forwards;
 }
 
-.back {
+.animationBackground {
     margin-top: 0;
     margin-left: 0;
     width: 100%;
@@ -330,13 +333,13 @@ section {
     text-align: center;
 }
 
-.nemek img {
+.nemekAnimation img {
     margin-top: 150px;
     position: fixed;
     width: 400px;
     margin-left: -200px;
 }
 
-.back:hover {
+.animationBackground:hover {
     cursor: pointer;
 }
