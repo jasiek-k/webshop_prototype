@@ -16,15 +16,7 @@ body {
     width: 200px;
 }
 
-.cart img {
-    float: left;
-    width: 35px;
-    margin-left: 25px;
-    margin-top: 20px;
-    margin-right: -60px;
-}
-
-.cart {
+.basket {
     position: fixed;
     right: 0;
     top: 0;
@@ -35,11 +27,32 @@ body {
     z-index: 8;
 }
 
-.cart span {
+.basket img {
+    float: left;
+    width: 35px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-right: -60px;
+}
+
+.basket p {
+    position: relative;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.basket span {
     position: relative;
     width: 150px;
     top: 30px;
     margin-right: 10px;
+}
+
+nav {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .navigation {
@@ -50,21 +63,14 @@ body {
     z-index: 7;
  }
 
-nav {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.nav {
+.navigationField {
     text-decoration: none;
     color: black;
     padding: 75px;
     line-height: 80px;
 }
 
-.nav:hover {
+.navigationField:hover {
     cursor: pointer;
 }
 
@@ -78,13 +84,7 @@ nav {
     z-index: 5;
 }
 
-.cart p {
-    position: relative;
-    width: 150px;
-    margin-left: 10px;
-}
-
-.pics {
+.containerPic {
     display: none;
 }
 
@@ -98,7 +98,7 @@ nav {
     height: 400px;
 }
 
-.left {
+.buttonLeft {
     position: relative;
     top: -260px;
     left: -40px;
@@ -109,21 +109,21 @@ nav {
     height: 40px;
 }
 
-.left p {
+.buttonLeft p {
     font-size: 40px;
     position: relative;
     left: 5px;
     bottom: 2px;
 }
 
-.right p {
+.buttonRight p {
     font-size: 40px;
     position: relative;
     left: 10px;
     bottom: 2px;
 }
 
-.right {
+.buttonRight {
     position: relative;
     top: -340px;
     left: 410px;
@@ -133,12 +133,11 @@ nav {
     height: 40px;
 }
 
-.left:hover, .right:hover {
+.buttonright:hover, .buttonRight:hover {
     cursor: pointer;
-
 }
 
-.text {
+.containerDescription {
     position: relative;
     width: 320px;
     height: 320px;
@@ -174,7 +173,7 @@ nav {
     cursor: default;
     margin-bottom: -5px;
 }
-.text h2 {
+.containerDescription h2 {
     font-size: 22px;
 }
 
@@ -226,9 +225,9 @@ section {
     width: 900px;
     height: 450px;
     background-color: black;
-    -webkit-box-shadow: 0px 38px 58px 3px rgba(0, 0, 0, 0.72);
-    -moz-box-shadow: 0px 38px 58px 3px rgba(0, 0, 0, 0.72);
-    box-shadow: 0px 38px 58px 3px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0 38px 58px 3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0 38px 58px 3px rgba(0, 0, 0, 0.72);
+    box-shadow: 0 38px 58px 3px rgba(0, 0, 0, 0.72);
     float: left;
     margin: 65px auto -400px 300px;
 }

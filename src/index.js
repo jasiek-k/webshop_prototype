@@ -1,15 +1,16 @@
 const back = document.getElementById("modalBackground");
 const tip = document.getElementById("modalTip");
-let tilesArray = document.getElementsByClassName("box");
+
 let picsArray = document.getElementsByClassName("boxPic");
+let contentArray = document.getElementsByClassName("box");
+
 let contentCategories = document.getElementsByClassName("filterCategory");
-let content = document.getElementsByClassName("box");
-let categories = ['tshirt', 'hoodie', 'cap', 'accessory', 'all'];
+const categories = ['tshirt', 'hoodie', 'cap', 'accessory', 'all'];
 let sideBarArray = document.getElementsByClassName("sidebarCategory");
 
-function openTile() {
-    for (let i = 0; i < tilesArray.length; i++) {
-        tilesArray[i].addEventListener("click", function () {
+function openBox() {
+    for (let i = 0; i < contentArray.length; i++) {
+        contentArray[i].addEventListener("click", function () {
             setBoxDisplay("inline-block", i);
         });
         picsArray[i].addEventListener("click", function () {
@@ -34,10 +35,10 @@ document.getElementById("nemekAnimation").addEventListener("click", function () 
 });
 
 function filter(string) {
-    for (let i = 0; i < content.length; i++) {
+    for (let i = 0; i < contentArray.length; i++) {
         setDisplay('inline-block', i);
     }
-    for (let i = 0; i < content.length; i++) {
+    for (let i = 0; i < contentArray.length; i++) {
         if (string !== 'all' && contentCategories[i].innerText !== string) {
             setDisplay('none', i);
         }
@@ -53,11 +54,11 @@ function filterListen() {
 }
 
 function setDisplay(string, i) {
-    content[i].style.display = string;
+    contentArray[i].style.display = string;
 }
 
 function main() {
-    openTile();
+    openBox();
     filterListen();
 }
 

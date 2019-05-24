@@ -1,5 +1,6 @@
 let slideIndex = 1;
-let text = document.getElementsByClassName("text");
+let text = document.getElementsByClassName("containerDescription");
+let pics = document.getElementsByClassName("containerPic");
 let sizeArray = document.getElementsByClassName("size");
 let quantityArray = [4, 7, 9, 3];
 
@@ -12,17 +13,16 @@ function decDivs() {
 }
 
 function showDivs(n) {
-    let x = document.getElementsByClassName("pics");
-    if (n > x.length) {
+    if (n > pics.length) {
         slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = x.length;
+        slideIndex = pics.length;
     }
-    for (let i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    for (let i = 0; i < pics.length; i++) {
+        pics[i].style.display = "none";
     }
-    x[slideIndex - 1].style.display = "block";
+    pics[slideIndex - 1].style.display = "block";
 }
 
 function chooseSize() {
