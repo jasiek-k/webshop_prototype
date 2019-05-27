@@ -31,7 +31,6 @@ function setBoxDisplay(value, i) {
 document.getElementById("nemekAnimation").addEventListener("click", function () {
     document.getElementById("animationBackground").classList.add("fadeOut");
     document.getElementById("nemekAnimation").classList.add("delete");
-
 });
 
 function filter(string) {
@@ -45,10 +44,31 @@ function filter(string) {
     }
 }
 
+function checkArray() {
+    for (let i = 0; i < sideBarArray.length; i++) {
+        if (sideBarArray[i].classList.contains("pressed")) {
+            return i;
+        }
+    }
+}
+
 function filterListen() {
+    let allowedPress=1;
     for (let i = 0; i < sideBarArray.length; i++) {
         sideBarArray[i].addEventListener("click", function () {
-            filter(categories[i]);
+            if (sideBarArray[i].classList.contains("pressed")) {
+                sideBarArray[i].classList.remove("pressed");
+                allowedPress++;
+                filter('all');
+            } else if (allowedPress === 1) {
+                sideBarArray[i].classList.add("pressed");
+                allowedPress--;
+                filter(categories[i]);
+            } else if (allowedPress === 0) {
+                sideBarArray[checkArray()].classList.remove("pressed");
+                sideBarArray[i].classList.add("pressed");
+                filter(categories[i]);
+            }
         })
     }
 }
