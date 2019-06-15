@@ -5,8 +5,11 @@ let picsArray = document.getElementsByClassName("boxPic");
 let contentArray = document.getElementsByClassName("box");
 
 let contentCategories = document.getElementsByClassName("filterCategory");
-const categories = ['tshirt', 'hoodie', 'cap', 'accessory', 'all'];
+const categories = ['tshirt', 'hoodie', 'cap', 'accessory'];
 let sideBarArray = document.getElementsByClassName("sidebarCategory");
+
+const siteCategories = document.getElementsByClassName('navigationField');
+siteCategories[0].classList.add('choosen');
 
 function openBox() {
     for (let i = 0; i < contentArray.length; i++) {
@@ -38,7 +41,7 @@ function filter(string) {
         setDisplay('inline-block', i);
     }
     for (let i = 0; i < contentArray.length; i++) {
-        if (string !== 'all' && contentCategories[i].innerText !== string) {
+        if (string != null && contentCategories[i].innerText !== string) {
             setDisplay('none', i);
         }
     }
@@ -59,7 +62,7 @@ function filterListen() {
             if (sideBarArray[i].classList.contains("pressed")) {
                 sideBarArray[i].classList.remove("pressed");
                 allowedPress++;
-                filter('all');
+                filter();
             } else if (allowedPress === 1) {
                 sideBarArray[i].classList.add("pressed");
                 allowedPress--;

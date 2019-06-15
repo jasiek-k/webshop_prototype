@@ -51,6 +51,7 @@ body {
 .navigation {
     position: fixed;
     margin-right: auto;
+    top: 0;
     width: 80%;
     margin-left: 150px;
 }
@@ -58,8 +59,15 @@ body {
 .navigationField {
     text-decoration: none;
     color: black;
-    padding: 75px;
+    padding: 31px 75px;
     line-height: 80px;
+}
+
+.choosen {
+    background-color: black;
+    position: relative;
+    top: -4px;
+    color: #fffff4;
 }
 
 .navigationField:hover {
@@ -90,7 +98,7 @@ nav {
     position: fixed;
     float: left;
     margin-top: 110px;
-    width: 250px;
+    width: 300px;
 }
 
 .sidebar p {
@@ -150,7 +158,7 @@ main {
 
 section {
     width: 1000px;
-    margin-left: 250px;
+    margin-left: 300px;
     text-align: center;
     margin-right: auto;
     display: inline-block;

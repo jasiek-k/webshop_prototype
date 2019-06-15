@@ -66,7 +66,7 @@ nav {
 .navigationField {
     text-decoration: none;
     color: black;
-    padding: 75px;
+    padding: 31px 75px;
     line-height: 80px;
 }
 
@@ -100,13 +100,20 @@ nav {
 
 .buttonLeft {
     position: relative;
-    top: -260px;
-    left: -40px;
+    top: -280px;
+    left: 0px;
     font-weight: bold;
     width: 40px;
     color: #fffff4;
     background-color: black;
     height: 40px;
+}
+
+.choosen {
+    background-color: black;
+    position: relative;
+    top: -4px;
+    color: #fffff4;
 }
 
 .buttonLeft p {
@@ -125,7 +132,7 @@ nav {
 
 .buttonRight {
     position: relative;
-    top: -340px;
+    top: -360px;
     left: 410px;
     font-weight: bold;
     width: 40px;

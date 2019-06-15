@@ -4,6 +4,9 @@ let pics = document.getElementsByClassName("containerPic");
 let sizeArray = document.getElementsByClassName("size");
 let quantityArray = [4, 7, 9, 3];
 
+const siteCategories = document.getElementsByClassName('navigationField');
+siteCategories[0].classList.add('choosen');
+
 function incDivs() {
     showDivs(slideIndex += 1);
 }
