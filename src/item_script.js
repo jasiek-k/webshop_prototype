@@ -1,5 +1,4 @@
 let slideIndex = 1;
-let text = document.getElementsByClassName("containerDescription");
 let pics = document.getElementsByClassName("containerPic");
 let sizeArray = document.getElementsByClassName("size");
 let quantityArray = [4, 7, 9, 3];
@@ -29,7 +28,6 @@ function showDivs(n) {
 }
 
 function chooseSize() {
-    ///FOR EACH
     for (let i = 0; i < sizeArray.length; i++) {
         sizeArray[i].addEventListener("click", function () {
             if (sizeArray[i].classList.contains("active")) {
